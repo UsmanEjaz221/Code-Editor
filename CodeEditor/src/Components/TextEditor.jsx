@@ -2,6 +2,7 @@ import { useState } from "react";
 import React from "react";
 import 'codemirror/lib/codemirror.css';
 import 'codemirror/theme/material.css';
+import 'codemirror/theme/duotone-light.css';
 import 'codemirror/mode/xml/xml';
 import 'codemirror/mode/css/css';
 import 'codemirror/mode/javascript/javascript';
@@ -13,7 +14,8 @@ function TextEditor (props){
         language,
         title,
         value,
-        onChange
+        onChange,
+        darkmode
     } = props
 
     function handleChange(editor, data, value){
@@ -40,7 +42,7 @@ function TextEditor (props){
                         lineWrapping: true,
                         lint: true,
                         mode: language,
-                        theme: 'material',
+                        theme: darkmode? 'material': 'duotone-light',
                         lineNumbers: true
                     }}               
                 />
