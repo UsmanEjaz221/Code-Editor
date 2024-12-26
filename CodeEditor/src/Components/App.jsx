@@ -67,11 +67,12 @@ function App() {
           />
         </div>
         <div className='mode'>
-            <select onChange={(event) => {
-              setDarkMode(Boolean(event.target.value));  
+            <select 
+              onChange={(event) => {
+              setDarkMode(Boolean(event.target.value === "1"));  
             }}>
-              <option value="true">Dark Mode</option>
-              <option value="false">Light Mode</option>
+              <option value="1">Dark Mode</option>
+              <option value="0">Light Mode</option>
 
             </select>
         </div>
