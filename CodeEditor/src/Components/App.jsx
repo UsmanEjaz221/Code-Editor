@@ -67,6 +67,7 @@ function App() {
           />
         </div>
         <div className='mode'>
+            <label>Select Theme: </label>
             <select 
               onChange={(event) => {
               setDarkMode(Boolean(event.target.value === "1"));  
