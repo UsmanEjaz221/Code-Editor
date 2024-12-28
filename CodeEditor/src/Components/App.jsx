@@ -84,7 +84,7 @@ function App() {
         <iframe
           srcDoc={srcDoc}
           title='output'
-          sandbox='allow-scripts'
+          sandbox='allow-scripts allow-modals'
           width={screenSize}
           height="100%"
         />
